@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>jar</packaging>
+  <groupId>jvm-languages-tour-deps-clj</groupId>
+  <artifactId>jvm-languages-tour-deps-clj</artifactId>
+  <version>0.1.0</version>
+  <name>jvm-languages-tour-deps-clj</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.11.3</version>
+    </dependency>
+    <dependency>
+      <groupId>clj-time</groupId>
+      <artifactId>clj-time</artifactId>
+      <version>0.15.2</version>
+    </dependency>
+    <dependency>
+      <groupId>clj-http</groupId>
+      <artifactId>clj-http</artifactId>
+      <version>3.12.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>java.jdbc</artifactId>
+      <version>0.7.12</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+  </build>
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <url>https://repo.clojars.org/</url>
+    </repository>
+  </repositories>
+</project>

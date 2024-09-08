@@ -1,0 +1,5 @@
+<bean id="dao" class="ProductJdbcDao">
+  <property name="dataSource">
+    <ref local="dataSource" />
+  </property>
+</bean>
