@@ -9,9 +9,9 @@ scalaVersion := "2.13.14"
 
 libraryDependencies += guice
 libraryDependencies ++= Seq(
-  "org.playframework" %% "play-json" % "2.10.6",
-//  "org.playframework" %% "play-slick" % "6.1.1",
-//  "org.postgresql" % "postgresql" % "42.7.4",
+  "org.playframework" %% "play-slick" % "6.1.1",
+  "org.playframework" %% "play-slick-evolutions" % "6.1.1",
+  "org.postgresql" % "postgresql" % "42.2.23",
   "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1" % Test
 )
 

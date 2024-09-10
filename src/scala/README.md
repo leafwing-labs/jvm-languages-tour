@@ -47,9 +47,19 @@
 | 3.4.0   | 2024-02-29   | Type System & Performance Improvements                                         |
 | 3.5.0   | 2024-08-22   | Scala CLI Runner, Named Tuples & Context Bounds Syntax Experiments             |
 
-## Scala Examples
+## Scala Domains
 
-## Scala Sources
+| Domain          | Sample Libraries                    | 
+|-----------------|-------------------------------------|
+| Web             | Play, finatra                       |
+| Data            | Apaache Spark, Flink, Doobie, Slick |
+| Data Science    | Breeze, Smile,                      |
+| Tools           | sbt, Ammonite, Mill, Metals         |     
+| Distributed     | Kafka, Finagle, Akka / Pekko        |
+| Caching         | scalacache, scaffeine, zio-cache    |
+| Graphs          | cassoary, scala-graph               |
+| Category Theory | Cats, scalaz                        |
+| Effects         | ZIO, fs2, Circe, Monocle            |
 
 ### Articles
 

@@ -1,6 +1,6 @@
 (ns tech.leafwinglabs.min-max)
 
-;; ways to return [min max] over some sequence
+;; seed
 (defn min-max
   [xs]
   (reduce
@@ -10,6 +10,7 @@
     [nil nil]
     xs))
 
+;; seeds
 (defn min-max-2
   [xs]
   (reduce (fn [[min max] x]
@@ -17,15 +18,8 @@
           [Integer/MAX_VALUE Integer/MIN_VALUE]
           xs))
 
+;; local functions
 (defn min-max-3
-  [xs]
-  (->> xs
-       (map #(* % %))
-       (reduce (fn [[min max] x]
-                 [(min min x) (max max x)])
-               [Integer/MAX_VALUE Integer/MIN_VALUE])))
-
-(defn min-max-4
   [xs]
   (letfn [(min-max [[p q] x]
             [(min p x) (max q x)])]
@@ -33,6 +27,16 @@
             [Integer/MAX_VALUE Integer/MIN_VALUE]
             xs)))
 
+;; threading
+(defn min-max-4
+  [xs]
+  (->> xs
+       (map #(* % %))
+       (reduce (fn [[min max] x]
+                 [(min min x) (max max x)])
+               [Integer/MAX_VALUE Integer/MIN_VALUE])))
+
+;; tail recursion
 (defn min-max-5
   [xs]
   (loop [xs xs, min Integer/MAX_VALUE, max Integer/MIN_VALUE]
@@ -42,4 +46,6 @@
         (recur (rest xs)
                (min min x)
                (max max x))))))
-b
+
+
+

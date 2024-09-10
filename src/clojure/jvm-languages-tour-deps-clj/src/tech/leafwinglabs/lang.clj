@@ -24,15 +24,15 @@
 ((comp not str/blank? :name) {:name "eric"})                ;; composition
 
 ;; special forms
-(if (:pred) true false)                                     ;; branch on predicate
-(do (:body))                                                ;; evaluate forms and return last
-(let [x 1] (:body))                                         ;; local bindings
-(fn f [x] (:do))                                            ;; higher order function
-#(:do)                                                      ;; anonymous functions
-(loop [acc '()] (do (:body) (recur)))                       ;; tail recursion
-(try (:body)                                                ;; exception handling
+(if '(:pred) true false)                                    ;; branch on predicate
+(do '(:body))                                               ;; evaluate forms and return last
+(let [x 1] '(:body))                                        ;; local bindings
+(fn f [x] '(:do))                                           ;; higher order function
+#(':do)                                                     ;; anonymous functions
+(loop [acc '()] (do '(:body) '(recur)))                       ;; tail recursion
+(try '(:body)                                               ;; exception handling
      (catch Exception e (throw e))
-     (finally (:body)))
+     (finally '(:body)))
 
 ;; collection data structures
 (seq '(:a))                                                 ;; base => lazy lists
@@ -47,6 +47,16 @@
 (filter odd? [1 2 3])                                       ;; filter => select
 (reduce + [1 2 3])                                          ;; reduce => fold
 (apply min [1 3 0 2])                                       ;; apply => variadic
+
+;; streams
+(def seq
+  (->> '("1" "2" "3" "4" "5")                               ;; chain of responsibilities
+       (map #(Integer/parseInt %))                          ;;  |
+       (filter even?)                                       ;;  |....
+       (map #( * % %))
+       (sort-by #(apply str (reverse (str %))))
+       (map #(str (char %)))
+       (clojure.string/join "|")));; => 1 2 3
 
 ;; metaprogramming
 (defmacro when' [t b] (list 'if t (cons 'do b)))            ;; macros transform symbols
@@ -63,10 +73,14 @@
 (-> " one , two, three "                                    ;; thread first => objects
     str/trim
     (str/replace #"\s?,\s?" "|")
-    #_(str/split #"|"))                                     ;; => "one|two|three"
+    #_(str/split #"|"))
+;; => "one|two|three"
+
+;; object side effects
 (doto (StringBuilder.)
   (.append "a")
-  (.append "b"))                                            ;; => #object[java.lang.StringBuilder 0x2c708440 "ab"]
-(doseq [x [1 2 3]] (println x))                             ;; => 1 2 3
+  (.append "b"))
+;; => #object[java.lang.StringBuilder 0x2c708440 "ab"]
 
-
+;; consumer
+(doseq [x [1 2 3]] (println x))

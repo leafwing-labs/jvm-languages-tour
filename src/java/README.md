@@ -89,16 +89,24 @@
         * Avoid reflection inefficiencies
         * Abstract dynamic methods and code generation into `CallSite` / `MethodHandle` objects
 
-## Java Examples
+### Java Domains
 
-* Generic
-    * [MinMax Computation](jvm-languages-tour-gradle-java/app/src/main/java/tech/leafwinglabs/MinMaxComputation.java)
-    * [MiniStringFuck](jvm-languages-tour-gradle-java/app/src/main/java/tech/leafwinglabs/MiniStringFuck.java)
-* Java Persistence
-* Java Web
-* Java Functional
-
-## Java Sources
+| Domain     | Sample Libraries                         | 
+|------------|------------------------------------------|
+| Framework  | Spring Boot, Micronaut, Quarkus          |
+| Web        | Servlets, Spring, Reactor, Dropwizard    |
+| Cloud      | Spring Cloud, Micronaut, Netflix OSS     |
+| Networking | Netty, okhttp, Jetty, Tomcat             |
+| Scheduling | Quartz, Spring Batch, Akka               |
+| Data       | Hibernate, JPA, JDBI                     |
+| Caching    | Caffeine, Guava, Ehcache                 |
+| Encoding   | Jackson, Gson, Protobuf                  |
+| Testing    | JUnit, Mockito, TestNG                   |
+| Build      | Maven, Gradle                            |
+| Logging    | Log4j, Logback, SLF4J                    |
+| Security   | Spring Security, Bouncy Castle, Keycloak |
+| Messaging  | Kafka, RabbitMQ, ActiveMQ                |
+| Monitoring | Prometheus, Grafana, Jaeger              |
 
 ### Java Articles
 

@@ -11,6 +11,20 @@ lazy val `jvm-languages-tour-sbt-sc3` =
     .settings(autoImportSettings)
     .settings(dependencies)
 
+lazy val dependencies = Seq(
+  libraryDependencies ++= Seq(
+    org.typelevel.`cats-core`,
+    org.scalatest.`scalatest`,
+  ),
+  libraryDependencies ++= Seq(
+    com.eed3si9n.expecty.expecty,
+    org.scalacheck.scalacheck,
+    org.scalameta.`munit-scalacheck`,
+    org.scalameta.munit,
+
+  ).map(_ % Test),
+)
+
 lazy val commonSettings = {
   lazy val commonScalacOptions = Seq(
     Compile / console / scalacOptions := {
@@ -51,17 +65,4 @@ lazy val autoImportSettings = Seq(
       "org.scalacheck",
       "org.scalacheck.Prop",
     ).mkString(start = "-Yimports:", sep = ",", end = ""),
-)
-
-lazy val dependencies = Seq(
-  libraryDependencies ++= Seq(
-    // main dependencies
-  ),
-  libraryDependencies ++= Seq(
-    com.eed3si9n.expecty.expecty,
-    org.scalacheck.scalacheck,
-    org.scalameta.`munit-scalacheck`,
-    org.scalameta.munit,
-    org.typelevel.`discipline-munit`,
-  ).map(_ % Test),
 )

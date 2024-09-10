@@ -27,9 +27,18 @@ object Dependencies {
         "org.scalameta" %% artifact % "1.0.0"
     }
 
+    object scalatest {
+      val scalatest =
+        "org.scalatest" %% "scalatest" % "3.2.9"
+    }
+
     object typelevel {
       val `discipline-munit` =
         "org.typelevel" %% "discipline-munit" % "2.0.0"
+      val `cats-core` =
+        "org.typelevel" %% "cats-core" % "2.9.0"
     }
+
   }
+
 }

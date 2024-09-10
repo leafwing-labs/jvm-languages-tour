@@ -63,9 +63,15 @@ toSnakeCase = { s -> s.replaceAll(/([a-z])([A-Z])/, '$1_$2').toLowerCase() }
 | 4.0         | 2022-01-25   | Switch Expressions, Sealed Types, Records                                                    |
 | 5.0-alpha-9 | 2024-06-27   | Wildcard Type, String format type-checker, Extension Method improvements                     |
 
-## Groovy Examples
+## Groovy Domains
 
-## Groovy Sources
+| Domain    | Sample Libraries                             | 
+|-----------|----------------------------------------------|
+| Web       | Grails, Ratpack                              |
+| Data      | GORM, JDBI, Groovy SQL, Groovy Couchbase     |
+| Testing   | Spock, Geb, JUnit, TestNG                    |
+| Build     | Gradle, Gant, Griffon                        |
+| Scripting | Groovy Shell, Groovy Console, Groovy Scripts |
 
 ### Articles
 

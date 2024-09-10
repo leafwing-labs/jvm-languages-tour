@@ -61,27 +61,20 @@
     * Concrete Syntax Tree => Intermediate Abstract Syntax Tree
     * Branch Reduction
 
-### Kotlin `invokedynamic`
+### Kotlin Domains
 
-* JVM Method Invocation Types
-    * `invokevirtual` => Normal method
-    * `invokestatic` => Static method
-    * `invokeinterface` => Interface method
-    * `invokespecial` => Constructor / `private` method
-    * `invokedynamic` => Dynamic method
-        * Avoid reflection inefficiencies
-        * Abstract dynamic methods and code generation into `CallSite` / `MethodHandle` objects
-
-## Kotlin Examples
-
-* Generic
-    * [MinMax Computation](jvm-languages-tour-gradle-java/app/src/main/java/tech/leafwinglabs/MinMaxComputation.java)
-    * [MiniStringFuck](jvm-languages-tour-gradle-java/app/src/main/java/tech/leafwinglabs/MiniStringFuck.java)
-* Java Persistence
-* Java Web
-* Java Functional
-
-## Kotlin Sources
+| Domain     | Sample Libraries                 |
+|------------|----------------------------------|
+| Device     | Android                          |
+| Framework  | Ktor, Spring, Koin               |
+| Cloud      | RxKotlin, Spring Cloud           |
+| Web        | Spring, Javalin                  |
+| Networking | ktor-http-client, Fuel, Retrofit |
+| Scheduling | Coroutines, Arrow                |
+| Data       | Exposed                          |
+| Testing    | Kotlin Test, MockK               |
+| Build      | Gradle                           |
+| Logging    | Timber                           |
 
 ### Kotlin Articles
 

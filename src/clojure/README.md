@@ -45,7 +45,22 @@
 | 1.11               | 2022-03-22   | `clojure.math`, `update-keys`, `update-vals`                                       |
 | Clojure 1.12.0-rc2 | 2024-08-28   | Hot Load Libs, `clojure.java.process`, Qualified Methods, Performance Enhancements |
 
-## Clojure Examples
+## Clojure Domains
+
+| Domain       | Sample Libraries                             | 
+|--------------|----------------------------------------------|
+| System       | Component, Integrant, Mount, Polylith        |
+| Config       | edn, aero                                    |
+| Web Server   | Ring, Reitit, Compojure                      |
+| Web Client   | Clojurescript, Pedestal, Om, Duct            |
+| Async        | core.async, aleph                            |
+| Data         | next.jdbc, honeysql, korma                   |
+| Data Science | Incanter, Neanderthal, Scicloj               |
+| Graphs       | Pathom, Specter,  Datomic                    |
+| Testing      | clojure.test, kaocha                         |
+| Spec         | clojure.spec, metosin/malli, plumatic/schema |
+| Matching     | core.match, Meander                          |
+| Tools        | deps, clj-kondo, Flow Storm                  |
 
 ### Clojure DSLs
 

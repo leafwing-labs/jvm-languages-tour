@@ -13,12 +13,12 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.bodyAndAwait
 import org.springframework.web.reactive.function.server.coRouter
 
-data class Product(
-    @Id val id: Int,
-    val name: String,
-    val description: String,
-    val price: Double
-)
+//data class Product(
+//    @Id val id: Int,
+//    val name: String,
+//    val description: String,
+//    val price: Double
+//)
 
 interface ProductRepository : CoroutineCrudRepository<Product, Int>
 
